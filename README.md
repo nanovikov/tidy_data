@@ -1,6 +1,4 @@
-===============================================================================
-Tidy Data Assignment
-===============================================================================
+## Tidy Data Assignment
 
 In this project, data obtained using wearable computing is downloaded from
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -9,20 +7,15 @@ in 'run_analysis.R' assuming that the working directory is set to the
 'UCI HAR Dataset' directory obtained by unzipping the downloaded datafile. The
 'CodeBook.md' describes the variables used in the 'tidy_data.csv' file. 
 
-===============================================================================
-Files
-===============================================================================
+## Files
 
-README.md : describes the purpose of the project and the other files
-run_analysis.R : R code for manipulating a specific dataset 
-tidy_data.csv : tidy data set obtained by running run_analysis.R
-tidy_summaries.csv : data set of averages for the variables in tidy_data.csv
-                     broken up by subject and activity
-CodeBook.md : file describing the variables in the tidy_data.csv
+* README.md : describes the purpose of the project and the other files
+* run_analysis.R : R code for manipulating a specific dataset 
+* tidy_data.csv : tidy data set obtained by running run_analysis.R
+* tidy_summaries.csv : data set of averages for the variables in tidy_data.csv broken up by subject and activity
+* CodeBook.md : file describing the variables in the tidy_data.csv
 
-===============================================================================
-License:
-===============================================================================
+## License
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
