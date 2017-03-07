@@ -32,7 +32,6 @@ The following files are available for the train and test data. Their description
 ### CONVERSION OF RAW DATA TO TIDY DATA 
 
 1. Data were downloaded at `https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip`
-
 2. Feature names were extracted from the 'features.txt' file. 
 ```
   features <- read.table("UCI HAR Dataset/features.txt", 
