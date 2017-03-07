@@ -1,4 +1,4 @@
-### README.md 
+## README
 
 Tidy data project based on the 'Human Activity Recognition Using Smartphones Dataset
 Version 1.0' published by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
