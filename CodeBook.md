@@ -35,7 +35,9 @@ The following files are available for the train and test data. Their description
 
 2. Feature names were extracted from the 'features.txt' file.
 
-    ```features <- read.table("UCI HAR Dataset/features.txt", header = F, col.names = c("number", "name"), stringsAsFactors = F)```
+    ```
+    features <- read.table("UCI HAR Dataset/features.txt", header = F, col.names = c("number", "name"), stringsAsFactors = F)
+    ```
 
 3. Feature names were rendered unique using the `make.unique` function. For example, when the same feature occured the names were given subscripts: 
 
@@ -44,8 +46,10 @@ The following files are available for the train and test data. Their description
     fBodyGyro-bandsEnergy()-1,8|fBodyGyro-bandsEnergy()-1,8.1
     fBodyGyro-bandsEnergy()-1,8|fBodyGyro-bandsEnergy()-1,8.2
 
-    ```# make the feature names unique 
-    features$name <- make.unique(features$name, sep = ".")```
+    ```
+    # make the feature names unique 
+    features$name <- make.unique(features$name, sep = ".")
+    ```
 
 4. The modified feature names were then simplified by converting  `(`, `)`, `.`, `,`, `-` to  `_` and making the text lowercase:
 
