@@ -103,7 +103,7 @@ The following files are available for the train and test data. Their description
   }
     ```
 5. The `make_table` function is applied to the testing and training data files to create two separate data tables that are then merged together and saved in the 'tidy_data.txt' file.
-
+    ```
   # generate the training data table
   train_data <- make_table("UCI HAR Dataset/train/subject_train.txt", 
                          "UCI HAR Dataset/train/y_train.txt", 
@@ -115,25 +115,25 @@ The following files are available for the train and test data. Their description
 
   # combine the training and test data sets
   full_data <- rbind(train_data, test_data)
-
+    ```
 
 6. The data was subset for variables containing 'mean' or 'std' in their title. The resulting data was saved in the file "tidy_data.txt".
-
+    ```
   #select only variables with 'mean' or 'std' in the title using 'idx'
   subset_data <- select(full_data, id, activity, contains("mean"), contains("std"))
 
   # save the data
   write.table(subset_data, "tidy_data.txt", row.names = F)
-
+    ```
 7. From the data set in step 6, create a second, independent tidy data set with the average of each variable for each activity and each subject.
-
+    ```
   # extract average for each measured variable grouped by subject and activity
   averages <- group_by(full_data, id, activity) %>%
           summarize_each(funs(mean))
 
   # save the data
   write.table(averages, "tidy_summaries.txt", row.names = F)
-
+    ```
 
 ### TIDY DATA
 
