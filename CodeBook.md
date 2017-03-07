@@ -59,20 +59,23 @@ The following files are available for the train and test data. Their description
     angle(tBodyGyroJerkMean,gravityMean)|angle_tbodygyrojerkmean_gravitymean
     fBodyGyro-bandsEnergy()-25,48|fbodygyro_bandsenergy_25_48
 
-    ```# clean up the feature names
+    ```
+    # clean up the feature names
     features$name <- gsub("\\()", "", features$name) 
     features$name <- gsub("\\-", "_", features$name) 
     features$name <- gsub("\\.", "_", features$name) 
     features$name <- gsub("\\,", "_", features$name) 
     features$name <- gsub("\\(", "_", features$name) 
     features$name <- gsub("\\)", "", features$name) 
-    features$name <- tolower(features$name)```
+    features$name <- tolower(features$name)
+    ```
 
 4. A function `make_table` was written to generate a data table for the "training" and "test" datasets. The functions takes the following arguments: 
-  * id_file : A file where each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30, and it is either 'train/subject_train.txt' or 'test/subject_test.txt'. 
-  * label_file : A file containing training or test labels of the activities that the subject was doing. The values of the rows are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING.  The file is either 'train/y_train.txt' or 'test/y_test.txt'
-  * feature_file : Dataset of 561-variables describes in the 'features.txt' file. The file is either 'train/X_train.txt' or 'test/X_test.txt'
+    * id_file : A file where each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30, and it is either 'train/subject_train.txt' or 'test/subject_test.txt'. 
+    * label_file : A file containing training or test labels of the activities that the subject was doing. The values of the rows are WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING.  The file is either 'train/y_train.txt' or 'test/y_test.txt'
+    * feature_file : Dataset of 561-variables describes in the 'features.txt' file. The file is either 'train/X_train.txt' or 'test/X_test.txt'
 
+    ```
   # 'make_table' is a function that generates a data table using the following inputs -
   # 'id_file' : path to file with subject ids 
   # 'label_file' : path to file with activity labels
@@ -98,7 +101,7 @@ The following files are available for the train and test data. Their description
                                                                     "laying"))
         full_data
   }
-
+    ```
 5. The `make_table` function is applied to the testing and training data files to create two separate data tables that are then merged together and saved in the 'tidy_data.txt' file.
 
   # generate the training data table
