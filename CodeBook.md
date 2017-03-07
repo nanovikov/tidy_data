@@ -44,27 +44,25 @@ The following files are available for the train and test data. Their description
     fBodyGyro-bandsEnergy()-1,8|fBodyGyro-bandsEnergy()-1,8.1
     fBodyGyro-bandsEnergy()-1,8|fBodyGyro-bandsEnergy()-1,8.2
 
-    # make the feature names unique 
-    features$name <- make.unique(features$name, sep = ".")
+    ```# make the feature names unique 
+    features$name <- make.unique(features$name, sep = ".")```
 
 4. The modified feature names were then simplified by converting  `(`, `)`, `.`, `,`, `-` to  `_` and making the text lowercase:
 
-Original name | New name
---------------|---------
-tBodyAcc-mean()-X|tbodyacc_mean_x
-angle(tBodyGyroJerkMean,gravityMean)|angle_tbodygyrojerkmean_gravitymean
-fBodyGyro-bandsEnergy()-25,48|fbodygyro_bandsenergy_25_48
+    Original name | New name
+    --------------|---------
+    tBodyAcc-mean()-X|tbodyacc_mean_x
+    angle(tBodyGyroJerkMean,gravityMean)|angle_tbodygyrojerkmean_gravitymean
+    fBodyGyro-bandsEnergy()-25,48|fbodygyro_bandsenergy_25_48
 
-```
-  # clean up the feature names
-  features$name <- gsub("\\()", "", features$name)
-  features$name <- gsub("\\-", "_", features$name)
-  features$name <- gsub("\\.", "_", features$name)
-  features$name <- gsub("\\,", "_", features$name)
-  features$name <- gsub("\\(", "_", features$name)
-  features$name <- gsub("\\)", "", features$name)
-  features$name <- tolower(features$name)
-```
+    ```# clean up the feature names
+    features$name <- gsub("\\()", "", features$name)
+    features$name <- gsub("\\-", "_", features$name)
+    features$name <- gsub("\\.", "_", features$name)
+    features$name <- gsub("\\,", "_", features$name)
+    features$name <- gsub("\\(", "_", features$name)
+    features$name <- gsub("\\)", "", features$name)
+    features$name <- tolower(features$name)```
 
 4. A function `make_table` was written to generate a data table for the "training" and "test" datasets. The functions takes the following arguments: 
   * id_file : A file where each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30, and it is either 'train/subject_train.txt' or 'test/subject_test.txt'. 
