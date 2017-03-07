@@ -37,7 +37,7 @@ The following files are available for the train and test data. Their description
 
 3. Feature names were rendered unique using the `make.unique` function. For example, two separate instances of "fBodyGyro-bandsEnergy()-1,8" were converted to "fBodyGyro-bandsEnergy()-1,8.1" and "fBodyGyro-bandsEnergy()-1,8.2" respectively based on the order in which they appeared.
 
-  \# make the feature names unique
+  \# make the feature names unique 
   features$name <- make.unique(features$name, sep = ".")
   
 4. The modified feature names were then simplified by converting to lowercase and substituting `_` for special characters like `(`, `)`, `.`, `,`, `-`. For example the following conversion were made:
