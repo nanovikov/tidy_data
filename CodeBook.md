@@ -56,12 +56,12 @@ The following files are available for the train and test data. Their description
     fBodyGyro-bandsEnergy()-25,48|fbodygyro_bandsenergy_25_48
 
     ```# clean up the feature names
-    features$name <- gsub("\\()", "", features$name)
-    features$name <- gsub("\\-", "_", features$name)
-    features$name <- gsub("\\.", "_", features$name)
-    features$name <- gsub("\\,", "_", features$name)
-    features$name <- gsub("\\(", "_", features$name)
-    features$name <- gsub("\\)", "", features$name)
+    features$name <- gsub("\\()", "", features$name) 
+    features$name <- gsub("\\-", "_", features$name) 
+    features$name <- gsub("\\.", "_", features$name) 
+    features$name <- gsub("\\,", "_", features$name) 
+    features$name <- gsub("\\(", "_", features$name) 
+    features$name <- gsub("\\)", "", features$name) 
     features$name <- tolower(features$name)```
 
 4. A function `make_table` was written to generate a data table for the "training" and "test" datasets. The functions takes the following arguments: 
